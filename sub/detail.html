@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>인터파크 전시</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/jquery.bxslider.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+	<script src="../js/jquery-3.3.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+	<script src="https://unpkg.com/tooltip.js/dist/umd/tooltip.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/jquery.bxslider.js"></script>
+	<style>
+		@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR');
+		body{font-family: 'Noto Sans KR', sans-serif;}
+		.topmenu_wrap{width: 100%; height: 40px; font-size: 12px;}
+		.logo_wrap{width: 100%; text-align: center}
+		.menu_wrap{background: #be1207;} 
+		.sliderul{overflow: hidden;}
+		.sliderul>li{float: left; width: 25%; height:400px; background: pink; padding:10px 20px;}
+		.jumbotron{height: 100px; background: url(images/banner.jpg) no-repeat center #eace46;}
+		.card{border:none;}
+		.dropdown-menu{border:none; text-align: right; font-size:14px; background: rgba(255,255,255,0.8);}
+		.dropdown-item:hover{background: none; font-weight: bold; color: #be1207}
+		.footer{width: 100%; color: #000; background: #eee;}
+		.footer p{font-size: 14px;}
+		.footer h5{color:#be1207 }
+		.aside_wrap{position: fixed; width: 100%; top:30%;right:-90%; z-index: 9999}
+		.mypage{width: 100px; height: 200px; text-align: center; background: blue;}
+		.top{text-align: center; width: 60px; height: 60px; border-radius:50%; background: blue; margin-top:30px; margin-left: 20px; line-height: 60px;}
+		#more{display: none;}
+
+		.iconphoto{display: inline-block;}
+		.slider_wrap{height: 40px; line-height: 40px; font-size: 14px; border:1px solid #ddd;}
+		.bx-wrapper{margin-bottom: 0 !important; box-shadow: none !important; }
+		
+		.card h5{font-weight: bold}
+		.card p{font-size: 14px;}
+
+		.topbtn{width: 60px; height: 60px; border-radius: 50%; background: #be1207; color: #fff; position: fixed; top: 90%; right: 30px; line-height: 60px; text-align: center;}
+		.topbtn a{display: block;}
+		.topbtn a:visited,a:link{color: #fff; text-decoration: none;}
+
+		ul .navbar-nav:after{content: ""; clear: both; display: block;}
+		ul .navbar-nav>li{float: left !important;}
+
+		.bubble_info{border-radius: 50%; width: 70px; height: 70px; border:1px solid #be1207; background: #fff; color:#be1207; font-size: 12px;}
+		.tooltip-inner{background: #be1207 !important; padding:10px; color: #fff; box-shadow: -2px -2px 10px #eee !important;}
+		.bs-tooltip-bottom .arrow::before, .bs-tooltip-auto[x-placement^="bottom"] .arrow::before {border-bottom-color: #be1207 !important; }
+
+		.ticket{width: 120px; height: 50px; background: #be1207; border:none; color:#fff;transition: .3s; cursor: pointer; font-size: 18px;}
+		.ticket:hover{box-shadow: 0px 0px 10px #ddd; background: #DD3B30;}
+	</style>
+	<script>
+		$(function(){
+			$("#myBtn").click(function(){
+				$("#more").show();
+			});
+			$('.slider_wrap').bxSlider({
+				mode:'vertical',
+				pager: false,
+				controls: false,
+				auto: true
+			});
+			$('.bubble_info').tooltip({title:"연령별",placement:"bottom"});
+		});
+	</script>
+</head>
+<body>
+	<header class="header">
+		<div class="topmenu_wrap">
+			<div class="container d-none d-xl-block d-md-block">
+				<ul class="nav float-right">
+					<li class="nav-item">
+						<a class="nav-link" href="#" style="color:#aaa">로그인</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#" style="color:#aaa">마이페이지</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#" style="color:#aaa">고객센터</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="logo_wrap">
+			<div class="container pt-4 pb-5 d-none d-xl-block d-md-block">
+				<a href="../index.html"><img src="../images/logo.png" alt="로고" style="width: 500px"></a>
+			</div>
+		</div>
+		<div class="menu_wrap1">
+			<div class="container p-0 d-block d-xl-none d-md-none">
+				<nav class="navbar sticky-top navbar-expand-lg navbar-light">
+				<a class="navbar-brand" href="#"><img src="./images/logo.png" alt="로고" style="width: 270px"></a>
+				  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				    <span class="navbar-toggler-icon"></span>
+				  </button>
+				  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+				    <ul class="navbar-nav mx-auto" style="color: #000">
+				      <li class="nav-item pt-4">
+				        <a class="nav-link" href="#">티켓공지</a>
+				      </li>
+				      <li class="nav-item">
+				        <a class="nav-link " href="#">전시</a>
+				      </li>
+				      <li class="nav-item">
+				        <a class="nav-link " href="#">뮤지엄</a>
+				      </li>
+				      <li class="nav-item">
+				        <a class="nav-link " href="#">아동체험전</a>
+				      </li>
+				      <li class="nav-item">
+				        <a class="nav-link " href="#">행사/축제</a>
+				      </li>
+				    </ul>
+				  </div>
+				</nav>
+			</div>
+		</div>
+		<div class="menu_wrap">
+			<div class="container d-none d-xl-block d-md-block pt-1 pb-1">
+				<ul class="nav">
+					<li class="nav-item mx-auto">
+				        <a class="nav-link" href="#" style="color: #fff"><b>티켓공지</b></a>
+				      </li>
+				      <li class="nav-item mx-auto">
+				        <a class="nav-link " href="#" style="color: #fff"><b>전시</b></a>
+				      </li>
+				      <li class="nav-item mx-auto">
+				        <a class="nav-link " href="#" style="color: #fff"><b>뮤지엄</b></a>
+				      </li>
+				      <li class="nav-item mx-auto">
+				        <a class="nav-link " href="#" style="color: #fff"><b>아동체험전</b></a>
+				      </li>
+				      <li class="nav-item mx-auto">
+				        <a class="nav-link " href="#" style="color: #fff"><b>행사/축제</b></a>
+				      </li>
+				</ul>
+			</div>
+		</div>
+		<!-- <div class="aside_wrap">
+			<div class="mypage">
+				로그인<br/>
+				해주세요
+			</div>
+			<div class="top">
+				<a href="#">TOP</a>
+			</div>
+		</div> -->
+	</header>
+	<div class="content">
+		<div class="container pb-0">
+			<div class="slider_wrap">
+				<div class="row">
+					<div class="col-md-2">
+						<i class="fas fa-bell" style="color: #be1207"></i> &nbsp;<b>티켓오픈안내</b>
+					</div>
+					<div class="col-md-10">
+						에르제 : 땡땡展 1차 얼리버드 티켓 오픈!
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-2">
+						<i class="fas fa-bell" style="color: #be1207"></i> &nbsp;<b>티켓오픈안내</b>
+					</div>
+					<div class="col-md-10">
+						아드만 애니메이션 - 두번째 외출 展 예매 오픈
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="content_title">
+			<div class="container pt-5 pb-5">
+				<div class="row">
+					<div class="col-md-11">
+						<h2><b>르누아르 : 여인의 향기</b></h2>
+						<p>2018.05.12 ~ 2019.04.28 &nbsp;&nbsp;| &nbsp;&nbsp;서울숲 갤러리아포레</p>
+					</div>
+					<div class="col-md-1 pt-2 text-center">
+						<button type="button" class="ticket">예매하기</button>
+					</div>
+				</div>
+				<div class="row mt-3">
+					<div class="col-md-3">
+						<img src="../images/eimage1.jpg" alt="르누아르" style="width:250px;">
+					</div>
+					<div class="col-md-1">
+						<b>인터파크 최적가</b><br/><p style="font-size: 14px; color:#8F8F8F">(성인)</p>
+						<p><b>할인가</b></p>
+						<p><b>부가할인</b></p>
+						<p><b>멤버십</b></p>
+					</div>
+					<div class="col-md-7 text-left">
+						<span style="color: #aaa; text-decoration: line-through;">15,000원</span><h2 style="color: #be1207;" class="mb-4"><b>12,000원</b></h2>
+						<p>입장권 [성인_10%할인] 13,500원</p>
+					</div>
+					<div class="col-md-1">
+						<button class="bubble_info" onfocus="blur()">예매자<br/>정보</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer class="footer">
+		<div class="container pt-5 pb-5">
+			<h5><b>인터파크 전시</b></h5><br/>
+			<p>
+				<b>개인정보처리방침</b> ㅣ 청소년보호정책 ㅣ 이용약관 ㅣ 티켓판매안내 ㅣ IR ㅣ 회사소개 ㅣ 채용공고 ㅣ 우수회원제도<br/><br/>
+				06168 서울시 강남구 삼성로 512 삼성동빌딩 10층(삼성동) ㅣ 대표이사 강동화, 김양선 ㅣ 사업자등록번호 214-87-98889<br/>
+				통신판매업신고 강남 02549호 ㅣ Copyright 2015 INTERPARK All rights reserved.</p>
+		</div>
+	</footer>
+	<div class="topbtn">
+		<a href="#">TOP</a>
+	</div>
+</body>
+</html>

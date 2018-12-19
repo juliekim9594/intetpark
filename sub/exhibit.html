@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>인터파크 전시</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/jquery.bxslider.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+	<script src="../js/jquery-3.3.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+	<script src="https://unpkg.com/tooltip.js/dist/umd/tooltip.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/jquery.bxslider.js"></script>
+	<style>
+		@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR');
+		body{font-family: 'Noto Sans KR', sans-serif;}
+		.topmenu_wrap{width: 100%; height: 40px; font-size: 12px;}
+		.logo_wrap{width: 100%; text-align: center}
+		.menu_wrap{background: #be1207;} 
+		.sliderul{overflow: hidden;}
+		.sliderul>li{float: left; width: 25%; height:400px; background: pink; padding:10px 20px;}
+		.jumbotron{height: 100px; background: url(images/banner.jpg) no-repeat center #eace46;}
+		.card{border:none;}
+		.dropdown-menu{border:none; text-align: right; font-size:14px; background: rgba(255,255,255,0.8);}
+		.dropdown-item:hover{background: none; font-weight: bold; color: #be1207}
+		.footer{width: 100%; color: #000; background: #eee;}
+		.footer p{font-size: 14px;}
+		.footer h5{color:#be1207 }
+		.aside_wrap{position: fixed; width: 100%; top:30%;right:-90%; z-index: 9999}
+		.mypage{width: 100px; height: 200px; text-align: center; background: blue;}
+		.top{text-align: center; width: 60px; height: 60px; border-radius:50%; background: blue; margin-top:30px; margin-left: 20px; line-height: 60px;}
+		#more{display: none;}
+
+		.iconphoto{display: inline-block;}
+		.slider_wrap{height: 40px; line-height: 40px; font-size: 14px; border:1px solid #ddd;}
+		.bx-wrapper{margin-bottom: 0 !important; box-shadow: none !important; }
+		
+		.card h5{font-weight: bold}
+		.card p{font-size: 14px;}
+
+		.topbtn{width: 60px; height: 60px; border-radius: 50%; background: #be1207; color: #fff; position: fixed; top: 90%; right: 30px; line-height: 60px; text-align: center;}
+		.topbtn a{display: block;}
+		.topbtn a:visited,a:link{color: #fff; text-decoration: none;}
+
+		ul .navbar-nav:after{content: ""; clear: both; display: block;}
+		ul .navbar-nav>li{float: left !important;}
+	</style>
+	<script>
+		$(function(){
+			$("#myBtn").click(function(){
+				$("#more").show();
+			});
+			$('.slider_wrap').bxSlider({
+				mode:'vertical',
+				pager: false,
+				controls: false,
+				auto: true
+			});
+		});
+	</script>
+</head>
+<body>
+	<header class="header">
+		<div class="topmenu_wrap">
+			<div class="container d-none d-xl-block d-md-block">
+				<ul class="nav float-right">
+					<li class="nav-item">
+						<a class="nav-link" href="#" style="color:#aaa">로그인</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#" style="color:#aaa">마이페이지</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#" style="color:#aaa">고객센터</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="logo_wrap">
+			<div class="container pt-4 pb-5 d-none d-xl-block d-md-block">
+				<a href="../index.html"><img src="../images/logo.png" alt="로고" style="width: 500px"></a>
+			</div>
+		</div>
+		<div class="menu_wrap1">
+			<div class="container p-0 d-block d-xl-none d-md-none">
+				<nav class="navbar sticky-top navbar-expand-lg navbar-light">
+				<a class="navbar-brand" href="#"><img src="../images/logo.png" alt="로고" style="width: 270px"></a>
+				  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				    <span class="navbar-toggler-icon"></span>
+				  </button>
+				  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+				    <ul class="navbar-nav mx-auto" style="color: #000">
+				      <li class="nav-item pt-4">
+				        <a class="nav-link" href="#">티켓공지</a>
+				      </li>
+				      <li class="nav-item">
+				        <a class="nav-link " href="#">전시</a>
+				      </li>
+				      <li class="nav-item">
+				        <a class="nav-link " href="#">뮤지엄</a>
+				      </li>
+				      <li class="nav-item">
+				        <a class="nav-link " href="#">아동체험전</a>
+				      </li>
+				      <li class="nav-item">
+				        <a class="nav-link " href="#">행사/축제</a>
+				      </li>
+				    </ul>
+				  </div>
+				</nav>
+			</div>
+		</div>
+		<div class="menu_wrap">
+			<div class="container d-none d-xl-block d-md-block pt-1 pb-1">
+				<ul class="nav">
+					<li class="nav-item mx-auto">
+				        <a class="nav-link" href="#" style="color: #fff"><b>티켓공지</b></a>
+				      </li>
+				      <li class="nav-item mx-auto">
+				        <a class="nav-link " href="#" style="color: #fff"><b>전시</b></a>
+				      </li>
+				      <li class="nav-item mx-auto">
+				        <a class="nav-link " href="#" style="color: #fff"><b>뮤지엄</b></a>
+				      </li>
+				      <li class="nav-item mx-auto">
+				        <a class="nav-link " href="#" style="color: #fff"><b>아동체험전</b></a>
+				      </li>
+				      <li class="nav-item mx-auto">
+				        <a class="nav-link " href="#" style="color: #fff"><b>행사/축제</b></a>
+				      </li>
+				</ul>
+			</div>
+		</div>
+		<!-- <div class="aside_wrap">
+			<div class="mypage">
+				로그인<br/>
+				해주세요
+			</div>
+			<div class="top">
+				<a href="#">TOP</a>
+			</div>
+		</div> -->
+	</header>
+	<div class="content">
+		<div class="container pt-2 pb-2 d-none d-xl-block">
+			<div class="slider_wrap">
+				<div class="row">
+					<div class="col-md-2">
+						<i class="fas fa-bell" style="color: #be1207"></i> &nbsp;<b>티켓오픈안내</b>
+					</div>
+					<div class="col-md-10">
+						에르제 : 땡땡展 1차 얼리버드 티켓 오픈!
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-2">
+						<i class="fas fa-bell" style="color: #be1207"></i> &nbsp;<b>티켓오픈안내</b>
+					</div>
+					<div class="col-md-10">
+						아드만 애니메이션 - 두번째 외출 展 예매 오픈
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="content_title">
+			<div class="container pt-5 pb-5 mt-3 mb-3 text-center" style="background:url(../images/ex.jpg) no-repeat center fixed;background-size: cover;">
+				<h2 style="color: #fff"><b>전시</b></h2>
+			</div>
+		</div>
+		<div class="content_tap">
+			<div class="container pt-0 pb-3 text-right">
+				<div class="dropdown">
+				  <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" style="font-size:12px; background-color: #fff;" >
+				    인기순
+				  </button>
+				  <div class="dropdown-menu dropdown-menu-right">
+				    <a class="dropdown-item" href="#" style="color: #000">최신순</a>
+				    <a class="dropdown-item" href="#" style="color: #000">연인과 함께</a>
+				    <a class="dropdown-item" href="#" style="color: #000">가족과 함께</a>
+				    <a class="dropdown-item" href="#" style="color: #000">친구와 함께</a>
+				    <a class="dropdown-item" href="#" style="color: #000">혼자 느긋히</a>
+				  </div>
+				</div>
+			</div>
+		</div>
+		<div class="content_article">
+			<div class="container pb-5">
+				<div class="row pt-5 pb-5">
+					<div class="col-md-6">
+						<div class="row">
+							<div class="col-md-6" style="background:url(../images/eimage1.jpg) no-repeat center; background-size: cover; height: 400px"></div>
+							<div class="col-md-6 pl-4">
+								<h4><b>르누아르 : 여인의 향기</b></h4>
+								<p class="mt-4 mb-5">2018.05.12 ~ 2019.04.28<br/>서울숲 갤러리아포레</p>
+								<div class="btn btn-danger mt-5"><a href="detail.html" class="text-light">예매하기</a></div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="row">
+							<div class="col-md-6"  style="background:url(../images/eimage2.jpg) no-repeat center; background-size: cover; height: 400px"></div>
+							<div class="col-md-6 pl-4">
+								<h4><b>메간헤스 아이코닉</b></h4>
+								<p class="mt-4 mb-5">2018.10.18 ~ 2018.12.30<br/>서울숲갤러리아포레 G층</p>
+								<div class="btn bg-danger text-light mt-5">예매하기</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row pt-5 pb-5">
+					<div class="col-md-6">
+						<div class="row">
+							<div class="col-md-6" style="background:url(../images/eimage3.jpg) no-repeat center; background-size: cover; height: 400px"></div>
+							<div class="col-md-6 pl-4">
+								<h4><b>앨리스 : 인투더래빗홀</b></h4>
+								<p class="mt-4 mb-5">2018.09.07 ~ 오픈런<br/>제주 소인국테마파크</p>
+								<div class="btn btn-danger mt-5"><a href="detail.html" class="text-light">예매하기</a></div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="row">
+							<div class="col-md-6"  style="background:url(../images/eimage4.jpg) no-repeat center; background-size: cover; height: 400px"></div>
+							<div class="col-md-6 pl-4">
+								<h4><b>김홍도 Alive</b></h4>
+								<p class="mt-4 mb-5">2018.09.18 ~ 2019.02.24<br/>용산 전쟁기념관 기획전시실</p>
+								<div class="btn bg-danger text-light mt-5">예매하기</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="more">
+					<div class="row pt-5 pb-5">
+						<div class="col-md-6">
+							<div class="row">
+								<div class="col-md-6" style="background:url(../images/eimage5.jpg) no-repeat center; background-size: cover; height: 400px"></div>
+								<div class="col-md-6 pl-4">
+									<h4><b>아드만 애니메이션</b></h4>
+									<p class="mt-4 mb-5">2018.10.07 ~ 2019.02.10<br/>부암동 서울미술관</p>
+									<div class="btn btn-danger mt-5"><a href="detail.html" class="text-light">예매하기</a></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="row">
+								<div class="col-md-6"  style="background:url(../images/eimage6.jpg) no-repeat center; background-size: cover; height: 400px"></div>
+								<div class="col-md-6 pl-4">
+									<h4><b>키스해링</b></h4>
+									<p class="mt-4 mb-5">2018.11.24 ~ 2019.03.17<br/>동대문디자인플라자(DDP)</p>
+									<div class="btn bg-danger text-light mt-5">예매하기</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+		        	<div class="col-md-12 text-center pt-4 pb-4">
+		        		<div class="btn btn-outline-danger" id="myBtn">
+		        			더 보기
+		        		</div>
+		        	</div>
+	        	</div>
+			</div>
+		</div>
+	</div>
+	<footer class="footer">
+		<div class="container pt-5 pb-5">
+			<h5><b>인터파크 전시</b></h5><br/>
+			<p>
+				<b>개인정보처리방침</b> ㅣ 청소년보호정책 ㅣ 이용약관 ㅣ 티켓판매안내 ㅣ IR ㅣ 회사소개 ㅣ 채용공고 ㅣ 우수회원제도<br/><br/>
+				06168 서울시 강남구 삼성로 512 삼성동빌딩 10층(삼성동) ㅣ 대표이사 강동화, 김양선 ㅣ 사업자등록번호 214-87-98889<br/>
+				통신판매업신고 강남 02549호 ㅣ Copyright 2015 INTERPARK All rights reserved.</p>
+		</div>
+	</footer>
+	<div class="topbtn">
+		<a href="#">TOP</a>
+	</div>
+</body>
+</html>
